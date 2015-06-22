@@ -9,6 +9,7 @@ import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class ManglingSentences {
+    
     public static void main(String[] args) {
         Scanner in;
         String line;
@@ -59,5 +60,5 @@ public class ManglingSentences {
 
         return word.toString();
     }
-    
+
 }
