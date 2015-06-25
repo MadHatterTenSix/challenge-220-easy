@@ -4,18 +4,13 @@
  *
  * Edited: 2015-06-25
  *
- * Converting Unicode characters to ASCII
- * http://stackoverflow.com/questions/15356716/how-can-i-convert-unicode-string-to-ascii-in-java
- *
  */
 
 /* ManglingSentences.java */
 
-import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.StringTokenizer;
-import java.util.regex.Pattern;
 
 public class ManglingSentences {
 
@@ -24,14 +19,12 @@ public class ManglingSentences {
         Character c;
         Scanner in = new Scanner(System.in);
         String line;
-        String regex = Pattern.quote("[\\p{InCombiningDiacriticalMarks}\\p{IsLm}\\p{IsSk}]+");
         StringBuilder output = new StringBuilder();
         StringBuilder input;
         StringTokenizer stringTokenizer;
         ArrayList<Integer> listOfCapitals;
 
         line = in.nextLine();
-        line = Normalizer.normalize(line, Normalizer.Form.NFD);
         listOfCapitals = getListOfCapitals(line);
 
         stringTokenizer = new StringTokenizer(line);
