@@ -6,7 +6,7 @@
  *
  * Converting Unicode characters to ASCII
  * http://stackoverflow.com/questions/15356716/how-can-i-convert-unicode-string-to-ascii-in-java
- * 
+ *
  */
 
 /* ManglingSentences.java */
@@ -51,16 +51,12 @@ public class ManglingSentences {
     }
 
     public static ArrayList<Integer> getListOfCapitals(String s) {
-        ArrayList<Integer> listOfCapitals;
-
-        listOfCapitals = new ArrayList<>();
-
+        ArrayList<Integer> listOfCapitals = new ArrayList<>();
         for (int i = 0; i < s.length(); i++) {
             if (Character.isUpperCase(s.charAt(i))) {
                 listOfCapitals.add(i);
             }
         }
-
         return listOfCapitals;
     }
 
@@ -69,7 +65,6 @@ public class ManglingSentences {
         int j;
         char tmpA;
         char tmpB;
-
         for (i = 1; i < word.length(); i++) {
             j = i;
             while (j > 0) {
@@ -83,7 +78,6 @@ public class ManglingSentences {
                 j -= 1;
             }
         }
-
         return word.toString();
     }
 
