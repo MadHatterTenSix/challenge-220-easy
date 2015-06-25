@@ -6,6 +6,7 @@
  *
  * Converting Unicode characters to ASCII
  * http://stackoverflow.com/questions/15356716/how-can-i-convert-unicode-string-to-ascii-in-java
+ * 
  */
 
 /* ManglingSentences.java */
@@ -28,7 +29,7 @@ public class ManglingSentences {
         StringBuilder input;
         StringTokenizer stringTokenizer;
         ArrayList<Integer> listOfCapitals;
-        
+
         line = in.nextLine();
         line = Normalizer.normalize(line, Normalizer.Form.NFD);
         listOfCapitals = getListOfCapitals(line);
